@@ -3,45 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SmartPOS</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <div class="logo"></div>
-      <div class="menu"></div>
-      <div class="user"></div>
-    </nav>
-    <main>
-      <div class="bar"></div>
-      <div class="content">
-        <header></header>
-        <div class="products">
-          <div class="product">
-            <img src="" alt="" />
-            <div class="details"></div>
-          </div>
-          <div class="product">
-            <img src="" alt="" />
-            <div class="details"></div>
-          </div>
-          <div class="product">
-            <img src="" alt="" />
-            <div class="details"></div>
-          </div>
-          <div class="product">
-            <img src="" alt="" />
-            <div class="details"></div>
-          </div>
-          <div class="product">
-            <img src="" alt="" />
-            <div class="details"></div>
-          </div>
-          <div class="product">
-            <img src="" alt="" />
-            <div class="details"></div>
-          </div>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">SmartPOS</span>
         </div>
-      </div>
-    </main>
+
+        <nav class="side-nav" aria-label="Primary">
+          <a class="side-item" href="#">
+            <span class="material-icons-outlined" aria-hidden="true">grid_view</span>
+            <span>Dashboard</span>
+          </a>
+          <a class="side-item is-active" href="#">
+            <span class="material-icons-outlined" aria-hidden="true">restaurant_menu</span>
+            <span>Food &amp; Drinks</span>
+          </a>
+          <a class="side-item" href="#">
+            <span class="material-icons-outlined" aria-hidden="true">chat_bubble_outline</span>
+            <span>Messages</span>
+          </a>
+          <a class="side-item" href="#">
+            <span class="material-icons-outlined" aria-hidden="true">receipt_long</span>
+            <span>Bill</span>
+          </a>
+          <a class="side-item" href="#">
+            <span class="material-icons-outlined" aria-hidden="true">settings</span>
+            <span>Settings</span>
+          </a>
+
+          <div class="side-section">Other</div>
+          <a class="side-item" href="#">
+            <span class="material-icons-outlined" aria-hidden="true">notifications_none</span>
+            <span>Notifications</span>
+            <span class="badge" aria-label="3 notifications">3</span>
+          </a>
+          <a class="side-item" href="#">
+            <span class="material-icons-outlined" aria-hidden="true">help_outline</span>
+            <span>Support</span>
+          </a>
+        </nav>
+
+        <div class="profile">
+          <div class="profile-top">
+            <img class="avatar" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Walter_White_S5B.png/250px-Walter_White_S5B.png" alt="Theresa Webb" />
+            <div class="profile-meta">
+              <div class="profile-name">Walter White</div>
+              <div class="profile-role">The one who cooks</div>
+            </div>
+          </div>
+          <a class="profile-cta" href="#">Open profile</a>
+        </div>
+
+        <div class="sidebar-foot">© 2020 SmartPOS App</div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="crumbs">
+            <button class="back" type="button" aria-label="Go back">
+              <span class="material-icons-outlined" aria-hidden="true">chevron_left</span>
+            </button>
+            <div class="trail">
+              <span class="trail-muted">Food &amp; Drinks</span>
+              <span class="trail-sep">›</span>
+              <span class="trail-strong">Burgers</span>
+            </div>
+          </div>
+
+          <label class="search" aria-label="Search">
+            <span class="material-icons-outlined" aria-hidden="true">search</span>
+            <input type="search" placeholder="Search..." />
+          </label>
+        </header>
+
+        <section class="page">
+          <h1 class="title">Burgers <span aria-hidden="true">🍔</span></h1>
+
+          <section class="featured" aria-label="Featured burgers">
+            <article class="card">
+              <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpbfCN5EyTk9KOayVZPND8oTKD9k6Trp780A&s" alt="Heisenburger" />
+              <div class="card-name">Heisenburger</div>
+              <div class="card-sub">150 g</div>
+              <div class="card-price">$3.50</div>
+            </article>
+            <article class="card">
+              <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ25hDN9CtDIG9-S7Iq513SvritpvA0uwo4gw&s" alt="White Crystals (salt 100%)" />
+              <div class="card-name">White Crystals (salt 100%)</div>
+              <div class="card-sub">1 g</div>
+              <div class="card-price">$13.50</div>
+            </article>
+            <article class="card">
+              <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF6p-LZobHnyWUucTe0l3pYLJuYGeqBhtgVQ&s" alt="Hamburger" />
+              <div class="card-name">Welp. I can't explain myself here. Blue meth.</div>
+              <div class="card-sub">1 g</div>
+              <div class="card-price">$133</div>
+            </article>
+          </section>
+
+          <section class="more" aria-label="More burgers">
+            <article class="card">
+              <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/John_Cena_by_Gage_Skidmore.jpg/250px-John_Cena_by_Gage_Skidmore.jpg" alt="Big John (Cena)" />
+              <div class="card-name">Big John (Cena)</div>
+              <div class="card-sub">114 kg</div>
+              <div class="card-price">$4.80</div>
+            </article>
+            <article class="card">
+              <img class="card-img" src="https://m.media-amazon.com/images/M/MV5BNDY1OGFkYmYtYTAyMy00MDFhLWJlZjctYmE3MjIwYTdkN2EyXkEyXkFqcGc@._V1_QL75_UY281_CR155,0,190,281_.jpg" alt="Spicy Chicken" />
+              <div class="card-name">Spicy Chicken</div>
+              <div class="card-sub">250 g</div>
+              <div class="card-price">$4.30</div>
+            </article>
+            <article class="card">
+              <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Aleja_Gwiazd_w_Krakowie.jpg/250px-Aleja_Gwiazd_w_Krakowie.jpg" alt="(not so) Superstars" />
+              <div class="card-name">(not so) Superstars</div>
+              <div class="card-sub">250 g</div>
+              <div class="card-price">$3.90</div>
+            </article>
+          </section>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
